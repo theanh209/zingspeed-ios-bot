@@ -10,7 +10,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = LocLoZingSpeed
 
-$(TWEAK_NAME)_FRAMEWORKS = UIKit Foundation Security QuartzCore CoreGraphics CoreText AVFoundation Accelerate GLKit SystemConfiguration GameController
+$(TWEAK_NAME)_FRAMEWORKS = UIKit Foundation Security QuartzCore CoreGraphics CoreText AVFoundation Accelerate GLKit SystemConfiguration GameController Metal MetalKit
 $(TWEAK_NAME)_CCFLAGS = -std=c++17 -fno-rtti -fno-exceptions -DNDEBUG -Wno-error
 $(TWEAK_NAME)_CFLAGS = -fobjc-arc -w
 $(TWEAK_NAME)_FILES = Menu.mm Mods.mm $(wildcard ImGui/*.mm) $(wildcard ImGui/*.cpp) $(wildcard Includes/*.mm)  $(wildcard Includes/*.m) $(wildcard Includes/*.cpp) $(wildcard Includes/Esp/*.m) $(wildcard Includes/Hooking/*.mm) $(wildcard Includes/SCLAlertView/*.m)
