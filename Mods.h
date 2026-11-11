@@ -1,27 +1,31 @@
-#ifndef MODS_H
-#define MODS_H
-
-#include "Includes/Unity/Vector3.h"
-#include "Includes/Unity/Unity.h"
-#include "Includes/Unity/Quaternion.h"
-#include <OpenGLES/ES2/gl.h>
-#include <OpenGLES/ES2/glext.h>
-#include "dlfcn.h"
-#include <vector>
-#include <functional>
-#include <string>
-#include "ImGui/imgui.h"
-#include "Includes/Hooking/JailedHook.h"
+// File: Mods.h
+#ifndef Mods_h
+#define Mods_h
 
 struct Mods {
-    bool bool1 = false, bool2 = false, bool3 = false;
-    std::string myText = "Initial Text";
-    std::string inputText = "";
-    float floatVal = 0;
-    int intval = 0, intval2 = 0;
+    // Tab Cơ Bản
+    bool TeleportAuto = false;
+    bool TeleportButton = false;
+    bool MiniBoot = false;
+    bool ThoatNhanh = false;
+    bool VoHanNitro = false;
+    bool NitroNhanh = false;
+    bool ECU3Luot = false;
+    bool TuDuaXe = false;
+    bool GiaToc = false;
+    
+    // Tab Auto Đua
+    int AutoDuaMode = 1; // 1: Theo đường hướng dẫn, 2: Tự ra giữa đường
+    bool AutoDuaLapTrinh = false;
+    
+    // Tab Nhân Vật / Xe
+    bool KySinh = false;
+    bool FakeTen = false;
+    bool ModSkin = false;
+    bool UnlockXeSkin = false;
+    bool ModChiSoXe = false;
 };
 
 extern Mods mods;
-void LoadMods();
 
-#endif // MODS_H
+#endif
