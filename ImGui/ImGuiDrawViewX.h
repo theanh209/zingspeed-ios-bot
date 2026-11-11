@@ -12,4 +12,7 @@
 
 @property (nonatomic, assign) BOOL isKeyboardVisible;
 
+// [FIX LỖI] Bổ sung property này để MenuUtils.mm có thể đọc được _vna.mtkView
+@property (nonatomic, strong, readonly) MTKView *mtkView;
+
 @end
