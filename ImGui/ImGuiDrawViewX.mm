@@ -6,8 +6,9 @@
 @interface ImGuiDrawViewX () <MTKViewDelegate, UIKeyInput>
 @property (nonatomic, strong) id<MTLDevice> device;
 @property (nonatomic, strong) id<MTLCommandQueue> commandQueue;
-@property (nonatomic, assign) BOOL isKeyboardVisible; // Thêm dòng này để fix lỗi biến chưa khai báo
-@property (nonatomic, strong, readonly) MTKView *mtkView; // Thêm dòng này để fix lỗi property
+
+// Lưu ý: Đã xóa khai báo mtkView và isKeyboardVisible ở đây 
+// vì đã được khai báo public trong file .h để tránh lỗi trùng lặp (duplicate)
 @end
 
 @implementation ImGuiDrawViewX
@@ -67,7 +68,7 @@ extern MenuInteraction* menuTouchView;
     return menuVisible;
 }
 
-// Hàm getter này đã có sẵn, nó sẽ tự động map với property readonly ở trên
+// Hàm getter này kết hợp với property readonly trong .h sẽ cho phép gọi .mtkView
 - (MTKView *)mtkView {
     return (MTKView *)self.view;
 }
