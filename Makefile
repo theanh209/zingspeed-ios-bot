@@ -8,7 +8,7 @@ CFLAGS = -fobjc-arc
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = iOSImGui
+TWEAK_NAME = LocLoZingSpeed
 
 $(TWEAK_NAME)_FRAMEWORKS =  UIKit Foundation Security QuartzCore CoreGraphics CoreText  AVFoundation Accelerate GLKit SystemConfiguration GameController
 $(TWEAK_NAME)_CCFLAGS = -std=c++11 -fno-rtti -fno-exceptions -DNDEBUG
@@ -19,10 +19,8 @@ $(TWEAK_NAME)_LIBRARIES += substrate
 $(TWEAK_NAME)_LDFLAGS += -L./Includes/Libs
 $(TWEAK_NAME)_LDFLAGS += -lz -stdlib=libc++ -ldobby_fixed
 
-#LQMNemOS_LIBRARIES += substrate
-# GO_EASY_ON_ME = 1
-
 include $(THEOS_MAKE_PATH)/tweak.mk
 include $(THEOS)/makefiles/aggregate.mk
+
 after-install::
    install.exec "killall -9 Springboard || :"
