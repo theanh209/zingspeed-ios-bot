@@ -1,7 +1,7 @@
 #include "Mods.h"
 
 Mods mods;
-char* BinaryName = "";
+char* BinaryName = "Frameworks/UnityFramework.framework/UnityFramework";
 
 /*
 bool *(*FunctionPointer)(void *) = nullptr;
