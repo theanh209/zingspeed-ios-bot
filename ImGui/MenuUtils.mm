@@ -3,7 +3,7 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define timer(sec) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, sec * NSEC_PER_SEC), dispatch_get_main_queue(), ^
 
-// Khai báo interface mở rộng để gọi được các hàm ẩn
+// [FIX] Khai báo Interface ẩn để gọi hàm updateIOWithTouchEvent: mà không bị compiler cảnh báo
 @interface ImGuiDrawViewX (Private)
 - (void)updateIOWithTouchEvent:(UIEvent *)event;
 @end
