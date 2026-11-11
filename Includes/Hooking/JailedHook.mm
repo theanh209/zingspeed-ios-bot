@@ -1,14 +1,15 @@
+#import "JailedHook.h"
+
+// Include Dobby với extern "C" bọc chuẩn (để không lỗi thư viện C++)
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#import "JailedHook.h"
-#include "../Libs/dobby_defines.h" // Đã sửa lại đường dẫn include chuẩn
-
+#include "../Libs/dobby_defines.h"
 #ifdef __cplusplus
 }
 #endif
 
+//HOOK BEGIN
 #pragma GCC diagnostic ignored "-Warc-performSelector-leaks"
 #pragma GCC diagnostic ignored "-Wunused-function"
 #pragma GCC diagnostic ignored "-Wincomplete-implementation"
